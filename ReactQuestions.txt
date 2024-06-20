@@ -2,3 +2,4 @@
 2 => create the increment and decrement  counter application?
 3=> create a form that takes user input and display it in the realtime?
 4=> Build a list component to display a list of items?
+5=> Implement a basic toggle switch component?
