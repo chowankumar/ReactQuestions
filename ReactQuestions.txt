@@ -5,3 +5,4 @@
 5=> Implement a basic toggle switch component?
 6=> Create a component that fetches data from the an API and display it?
 7=> build a timer that counts down from a specified time?
+8=> simple todo add remove the task?
