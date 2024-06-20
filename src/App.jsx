@@ -1,9 +1,9 @@
  import React from 'react'
- import Three from './Three.jsx'
+ import Four from './Four.jsx'
  export const App = () => {
    return (
      <div>
-       <Three/>
+       <Four/>
      </div>
    )
  }
