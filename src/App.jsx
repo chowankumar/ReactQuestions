@@ -1,9 +1,9 @@
  import React from 'react'
- import Six from './Six.jsx'
+ import Seven from './Seven.jsx'
  export const App = () => {
    return (
      <div>
-       <Six/>
+       <Seven/>
      </div>
    )
  }

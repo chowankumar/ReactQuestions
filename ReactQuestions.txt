@@ -4,3 +4,4 @@
 4=> Build a list component to display a list of items?
 5=> Implement a basic toggle switch component?
 6=> Create a component that fetches data from the an API and display it?
+7=> build a timer that counts down from a specified time?
