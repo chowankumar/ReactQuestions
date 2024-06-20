@@ -10,3 +10,4 @@
 10 =>  creation application change the bg color when we click on it?
 11=> build a basic routing setup ?
 12 => make application which dispaly random quotes on render?
+13 => Build a file Uploader component that allows users to upload image?
