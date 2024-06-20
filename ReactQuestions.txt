@@ -11,3 +11,4 @@
 11=> build a basic routing setup ?
 12 => make application which dispaly random quotes on render?
 13 => Build a file Uploader component that allows users to upload image?
+14 => basic authentication form with login and registration?
