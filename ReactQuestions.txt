@@ -3,3 +3,4 @@
 3=> create a form that takes user input and display it in the realtime?
 4=> Build a list component to display a list of items?
 5=> Implement a basic toggle switch component?
+6=> Create a component that fetches data from the an API and display it?
