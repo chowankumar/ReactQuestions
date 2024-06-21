@@ -13,3 +13,4 @@
 13 => Build a file Uploader component that allows users to upload image?
 14 => basic authentication form with login and registration?
 15=> gues the output of the given code and debug the code?
+16 => pass the event handlers as the props?
