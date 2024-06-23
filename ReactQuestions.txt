@@ -15,3 +15,5 @@
 15=> gues the output of the given code and debug the code?
 16 => pass the event handlers as the props?
 17 => give the example of the event propagation and define bubble target and capturing phase?
+18 =>  You have an array of object print data of object using useState hook?
+
