@@ -17,4 +17,5 @@
 17 => give the example of the event propagation and define bubble target and capturing phase?
 18 =>  You have an array of object print data of object using useState hook?
 19 => Give the example of lifting the state up example?
+20 => make mini toggle switch button?
 
