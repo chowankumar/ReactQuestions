@@ -19,3 +19,14 @@
 19 => Give the example of lifting the state up example?
 20 => make mini toggle switch button?
 
+
+
+
+
+
+
+
+
+
+///////////Theory Question///////////////////////////
+1 => Error(You provided a `value` prop to a form field without an 'onChange handler. This will render a read-only field. if the field should be mutable use 'defaultValye. Otherwise, set either `onChange` or `readOnly`) When this error comes we will not write anything in the input. We Provide default value empty string so at any render it wanna be a empty value.
