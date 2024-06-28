@@ -1,10 +1,10 @@
  import React from 'react'
- import { Todo } from './Projects/Todo/Todo'
+ import { TwentyOne } from './TwentyOne'
 
  export const App = () => {
    return (
      <section>
-      <Todo/>
+      <TwentyOne/>
      </section>
    )
  }

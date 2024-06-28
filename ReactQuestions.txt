@@ -1,23 +1,25 @@
-1 => create the hello  componet and render it?
-2 => create the increment and decrement  counter application?
-3 => create a form that takes user input and display it in the realtime?
-4 => Build a list component to display a list of items?
-5 => Implement a basic toggle switch component?
-6 => Create a component that fetches data from the an API and display it?
-7 => build a timer that counts down from a specified time?
-8 => simple todo add remove the task?
-9 => create buttons when we click the buttons  that changes  bgcolor of the div?
-10 =>  creation application change the bg color when we click on it?
-11=> build a basic routing setup ?
-12 => make application which dispaly random quotes on render?
-13 => Build a file Uploader component that allows users to upload image?
-14 => basic authentication form with login and registration?
-15=> gues the output of the given code and debug the code?
-16 => pass the event handlers as the props?
-17 => give the example of the event propagation and define bubble target and capturing phase?
-18 =>  You have an array of object print data of object using useState hook?
-19 => Give the example of lifting the state up example?
-20 => make mini toggle switch button?
+1 ==> create the hello  componet and render it?
+2 ==> create the increment and decrement  counter application?
+3 ==> create a form that takes user input and display it in the realtime?
+4 ==> Build a list component to display a list of items?
+5 ==> Implement a basic toggle switch component?
+6 ==> Create a component that fetches data from the an API and display it?
+7 ==> build a timer that counts down from a specified time?
+8 ==> simple todo add remove the task?
+9 ==> create buttons when we click the buttons  that changes  bgcolor of the div?
+10 ==>  creation application change the bg color when we click on it?
+11==> build a basic routing setup ?
+12 ==> make application which dispaly random quotes on render?
+13 ==> Build a file Uploader component that allows users to upload image?
+14 ==> basic authentication form with login and registration?
+15 ==> gues the output of the given code and debug the code?
+16 ==> pass the event handlers as the props?
+17 ==> give the example of the event propagation and define bubble target and capturing phase?
+18 ==>  You have an array of object print data of object using useState hook?
+19 ==> Give the example of lifting the state up example?
+20 ==> make mini toggle switch button?
+21 ==> Give example of Copying Array, Concating Arrays, Adding Elements to an Array, Spreading Object Properties?
+
 
 
 
@@ -29,4 +31,16 @@
 
 
 ///////////Theory Question///////////////////////////
-1 => Error(You provided a `value` prop to a form field without an 'onChange handler. This will render a read-only field. if the field should be mutable use 'defaultValye. Otherwise, set either `onChange` or `readOnly`) When this error comes we will not write anything in the input. We Provide default value empty string so at any render it wanna be a empty value.
+
+1===> Error[You provided a `value` prop to a form field without an 'onChange handler. This will render a read-only field. if the field should be mutable use 'defaultValye. Otherwise, set either `onChange` or `readOnly`?]When this error comes we will not write anything in the input. We Provide default value empty string so at any render it wanna be a empty value.
+
+
+
+
+2==> SPREAD OPERATOR :: the spread operator (...)in js(React) allows an iterable (like an array of string) to be expanded into individual elements. it provides a consise way to spread the elements of an iterable object into places where multiple elements (arguments or elements in array literals) are expected.
+SYANTX : 
+Arrays  => const newArray = [...oldArray];
+Objects => const newObject = {...oldObject};
+useCases : Copying Array, Concating Arrays, Adding Elements to an Array, Spreading Object Properties.
+
+
