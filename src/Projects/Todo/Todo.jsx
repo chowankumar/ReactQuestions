@@ -4,7 +4,7 @@ import { MdCheck,MdDeleteForever } from "react-icons/md";
 
 
 
-export const Todo =()=>{
+export const Todo = ()=>{
     const [inputValue,setInputValue] = useState("");
     const [task,setTask] = useState([]);
 
