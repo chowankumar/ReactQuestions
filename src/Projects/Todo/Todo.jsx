@@ -38,11 +38,22 @@ export const Todo = ()=>{
             setDateTime(`${formattedDate} - ${formatettedTime}`)
            },1000)
 
-           return ()=> clearInterval(interval)
+           return ()=> clearInterval(interval )
 
     },[])
 
-   
+   //delete todo    
+   const handleDeleteTodo =(value)=>{
+
+    const updatedTask = task.filter((curtask)=> curtask !== value)
+    setTask(updatedTask)
+
+
+   }
+
+   const handleClearTodoData =()=>{
+    setTask([])
+   }
 
 
     return <section className="todo-container">
@@ -70,18 +81,28 @@ export const Todo = ()=>{
         <section>
             <ul>
                 {
-                   task.map((currTdo,index)=>{
+                   task.map((currTodo,index)=>{
                     return  (
                     <li key={index} className="todo-item">
-                        <span>{currTdo}</span>
+                        <span>{currTodo}</span>
                         <button className="check-btn"><MdCheck /></button>
-                        <button className="delete-btn"><MdDeleteForever /></button>
+                        <button 
+                        className="delete-btn"
+                        onClick={()=> handleDeleteTodo(currTodo)}
+                        ><MdDeleteForever /></button>
 
                     </li>
                     )
                    }) 
                 }
             </ul>
+        </section>
+
+        <section>
+            <button
+            className="clear-btn"
+            onClick={handleClearTodoData}
+            > Clear all</button>
         </section>
     </section>
 }
