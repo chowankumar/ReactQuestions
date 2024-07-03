@@ -1,107 +1,72 @@
 import { useEffect, useState } from "react"
 import "./Todo.css"
-import { MdCheck,MdDeleteForever } from "react-icons/md";
+
+import { TodoForm } from "./TodoForm";
+import { TodoList } from "./TodoList";
+import { TodoDate } from "./TodoDate";
 
 
 
-export const Todo = ()=>{
-    const [inputValue,setInputValue] = useState("");
-    const [task,setTask] = useState([]);
-    const [dateTime,setDateTime] = useState("");
+export const Todo = () => {
 
-    const handleInputChange =(value) =>{
-        setInputValue(value)
+    const [task, setTask] = useState([]);
+   
+
+
+
+    const handleFormSubmit = (inputValue) => {
+        if (!inputValue) return;
+        if (task.includes(inputValue)) return
+        setTask((prevTask) => [...prevTask, inputValue])
+    };
+
+
+
+
+
+
+    //delete todo    
+    const handleDeleteTodo = (value) => {
+
+        const updatedTask = task.filter((curtask) => curtask !== value)
+        setTask(updatedTask)
+
+
     }
 
-    const handleFormSubmit =(event)=>{
-        event.preventDefault();  
-
-        if(!inputValue) return;
-        if(task.includes(inputValue)){
-            setInputValue("");
-            return
-        }
-
-        setTask((prevTask)=> [...prevTask, inputValue])
-        setInputValue("")
+    const handleClearTodoData = () => {
+        setTask([])
     }
-
-
-    //todo date and time
-
-    useEffect(()=>{
-      const interval =   setInterval(()=>{
-            const now = new Date();
-            const formattedDate = now.toLocaleDateString();
-            const formatettedTime = now.toLocaleTimeString();
-        
-            setDateTime(`${formattedDate} - ${formatettedTime}`)
-           },1000)
-
-           return ()=> clearInterval(interval )
-
-    },[])
-
-   //delete todo    
-   const handleDeleteTodo =(value)=>{
-
-    const updatedTask = task.filter((curtask)=> curtask !== value)
-    setTask(updatedTask)
-
-
-   }
-
-   const handleClearTodoData =()=>{
-    setTask([])
-   }
 
 
     return <section className="todo-container">
         <header>
             <h1>Todo List</h1>
-            <h2 className="date-time">{dateTime}</h2>
+            <TodoDate/>
         </header>
 
-        <section className="form">
-            <form  onSubmit={handleFormSubmit}>
-                <div>
-                    <input type="text"
-                     className="todo-input"
-                     autoComplete="off"
-                     value={inputValue}
-                     onChange={(event)=> handleInputChange(event.target.value)}
-                    />
-                </div>
-                <div>
-                    <button type="text" className="todo-btn">Add</button>
-                </div>
-            </form>
-        </section>
+        <TodoForm onAddTodo={handleFormSubmit} />
 
         <section>
             <ul>
                 {
-                   task.map((currTodo,index)=>{
-                    return  (
-                    <li key={index} className="todo-item">
-                        <span>{currTodo}</span>
-                        <button className="check-btn"><MdCheck /></button>
-                        <button 
-                        className="delete-btn"
-                        onClick={()=> handleDeleteTodo(currTodo)}
-                        ><MdDeleteForever /></button>
-
-                    </li>
-                    )
-                   }) 
+                    task.map((currTodo, index) => {
+                        return (
+                            <TodoList 
+                            key={index}
+                            data={currTodo}
+                            onHandleDeleteTodo={handleDeleteTodo}
+                            />
+                        )
+                    })
                 }
             </ul>
         </section>
 
         <section>
             <button
-            className="clear-btn"
-            onClick={handleClearTodoData}
+                className="clear-btn"
+                onClick={handleClearTodoData}
             > Clear all</button>
         </section>
     </section>
