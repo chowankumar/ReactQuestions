@@ -11,27 +11,18 @@ export const Todo = () => {
 
     const [task, setTask] = useState([]);
    
-
-
-
     const handleFormSubmit = (inputValue) => {
-        if (!inputValue) return;
-        if (task.includes(inputValue)) return
+        const {id,content,checked} = inputValue; 
+        if (!content) return;
+        if (task.includes(inputValue)) return;
         setTask((prevTask) => [...prevTask, inputValue])
     };
-
-
-
-
-
 
     //delete todo    
     const handleDeleteTodo = (value) => {
 
         const updatedTask = task.filter((curtask) => curtask !== value)
         setTask(updatedTask)
-
-
     }
 
     const handleClearTodoData = () => {
