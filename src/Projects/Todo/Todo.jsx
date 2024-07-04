@@ -9,13 +9,18 @@ import { TodoDate } from "./TodoDate";
 
 export const Todo = () => {
 
-    const [task, setTask] = useState([]);
-   
+    const [task,setTask] = useState([]);
+
     const handleFormSubmit = (inputValue) => {
-        const {id,content,checked} = inputValue; 
+        const { id, content, checked } = inputValue;
         if (!content) return;
-        if (task.includes(inputValue)) return;
-        setTask((prevTask) => [...prevTask, inputValue])
+
+        const ifTodocontentMatched = task.find(
+        (curTask) => curTask.content === content);
+        if(ifTodocontentMatched) return;
+        
+
+        setTask((prevTask) => [...prevTask, {id,content,checked}])
     };
 
     //delete todo    
@@ -33,7 +38,7 @@ export const Todo = () => {
     return <section className="todo-container">
         <header>
             <h1>Todo List</h1>
-            <TodoDate/>
+            <TodoDate />
         </header>
 
         <TodoForm onAddTodo={handleFormSubmit} />
@@ -43,10 +48,10 @@ export const Todo = () => {
                 {
                     task.map((currTodo, index) => {
                         return (
-                            <TodoList 
-                            key={index}
-                            data={currTodo}
-                            onHandleDeleteTodo={handleDeleteTodo}
+                            <TodoList
+                                key={currTodo.id}
+                                data={currTodo.content}
+                                onHandleDeleteTodo={handleDeleteTodo}
                             />
                         )
                     })
