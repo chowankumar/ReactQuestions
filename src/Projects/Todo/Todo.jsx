@@ -26,7 +26,7 @@ export const Todo = () => {
     //delete todo    
     const handleDeleteTodo = (value) => {
 
-        const updatedTask = task.filter((curtask) => curtask !== value)
+        const updatedTask = task.filter((curtask) => curtask.content !== value)
         setTask(updatedTask)
     }
 
@@ -34,6 +34,18 @@ export const Todo = () => {
         setTask([])
     }
 
+    const handleCheckTodo=(content)=>{
+
+         const updatedTask = task.map((currTask)=> {
+          if(currTask.content === content){
+            return {...currTask, checked: !curTask.checked};
+          }else {
+            return currTask
+          }
+         })
+         setTask(updatedTask)
+
+    }
 
     return <section className="todo-container">
         <header>
@@ -51,7 +63,9 @@ export const Todo = () => {
                             <TodoList
                                 key={currTodo.id}
                                 data={currTodo.content}
+                                checked={currTodo.checked}
                                 onHandleDeleteTodo={handleDeleteTodo}
+                                onHnadleCheckTodo={handleCheckTodo}
                             />
                         )
                     })

@@ -7,7 +7,7 @@ export const TodoForm =({onAddTodo})=>{
         setInputValue({id:value,content:value, checked:false});
     }
 
-    const handleFormSubmit =(event)=>{
+    const handleFormSubmit =(event)=>{   
         event.preventDefault();
         onAddTodo(inputValue)
         setInputValue({id:"",content:"",checked:false});
