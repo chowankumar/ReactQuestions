@@ -1,11 +1,11 @@
  import React from 'react'
  
-import { Todo } from './Projects/Todo/Todo'
+import Twentytwo from './Twentytwo'
 
  export const App = () => {
    return (
      <section>
-      <Todo/>
+      <Twentytwo/>
      </section>
    )
  }

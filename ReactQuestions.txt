@@ -19,6 +19,7 @@
 19 ==> Give the example of lifting the state up example?
 20 ==> make mini toggle switch button?
 21 ==> Give example of Copying Array, Concating Arrays, Adding Elements to an Array, Spreading Object Properties?
+22 ==> make a increment and decreament app whuch increase the count decrease reset and set limit?
 
 
 
